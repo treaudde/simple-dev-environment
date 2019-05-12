@@ -12,5 +12,8 @@ RUN apt update && apt install -y git zip && rm -rf /var/lib/apt/lists/*
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash - && \
     apt install -y nodejs  && rm -rf /var/lib/apt/lists/*
 
+#Install Global Gulp
+RUN npm install -g gulp-cli && npm install -g sass
+
 
 
