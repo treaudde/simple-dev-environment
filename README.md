@@ -9,3 +9,7 @@ PHP / Javascript applications.  Current software it includes:
 
 This image will be updated as I add more things, or broken into multiple images
 as I see the need.
+
+## Usage
+### Docker Repository Location
+`docker pull treaudde/simple-development-environment:latest`
