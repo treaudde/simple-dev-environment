@@ -19,5 +19,7 @@ RUN npm install -g gulp-cli sass webpack webpack-cli
 #INSTALL Additional PHP Extensions
 RUN docker-php-source extract \
     && docker-php-ext-install bcmath \
+    && docker-php-ext-install mysqli \
+    && docker-php-ext-install pdo_mysql \
     && docker-php-source delete
 
