@@ -23,3 +23,5 @@ RUN docker-php-source extract \
     && docker-php-ext-install pdo_mysql \
     && docker-php-source delete
 
+#Enable mod_rewrite
+RUN a2enmod rewrite
