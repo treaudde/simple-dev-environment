@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  rss-api-backend:
+    container_name: rss-api-backend
+    image: treaudde/simple-development-environment:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./config/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: rss-database
+      DB_PORT: 3306
+      DB_DATABASE: rss
+      DB_USERNAME: rss
+      DB_PASSWORD: insecure_password
+
+
