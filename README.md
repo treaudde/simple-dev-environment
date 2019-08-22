@@ -13,6 +13,11 @@ PHP / Javascript applications.  Current software it includes:
 This image will be updated as I add more things, or broken into multiple images
 as I see the need.
 
+### Update (8/13/2019)
+Added a production docker file. To be improved.
+
 ## Usage
 ### Docker Repository Location
-`docker pull treaudde/simple-development-environment:latest`
+`docker pull treaudde/simple-development-environment:latest` 
+
+`docker pull treaudde/simple-production-environment:latest`
