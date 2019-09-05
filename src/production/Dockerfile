@@ -17,3 +17,6 @@ RUN docker-php-source extract \
 
 #Enable mod_rewrite
 RUN a2enmod rewrite
+
+#Copy PHP INI
+COPY config/php.ini /usr/local/etc/php/
