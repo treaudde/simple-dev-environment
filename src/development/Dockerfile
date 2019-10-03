@@ -12,9 +12,8 @@ RUN apt update && apt install -y git zip && rm -rf /var/lib/apt/lists/*
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash - && \
     apt install -y nodejs  && rm -rf /var/lib/apt/lists/*
 
-#Install Global Gulp / Sass / Webpack
-RUN npm install -g gulp-cli sass webpack webpack-cli
-
+#Install Global Gulp / Sass / Webpack / Vue CLI
+RUN npm install -g gulp-cli sass webpack webpack-cli @vue/cli @vue/cli-service-global
 
 #INSTALL Additional PHP Extensions
 RUN apt-get update && \
@@ -32,7 +31,6 @@ RUN docker-php-source extract \
 
 #Enable mod_rewrite
 RUN a2enmod rewrite
-
 
 #Copy PHP INI
 COPY config/php.ini /usr/local/etc/php/
