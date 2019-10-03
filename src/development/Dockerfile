@@ -1,8 +1,8 @@
 #SIMPLE DEV ENVIRONMENT
-FROM php:7.3.5-apache-stretch
+FROM php:7.3.10-apache-stretch
 
 #INSTALL COMPOSER
-RUN curl https://getcomposer.org/download/1.8.5/composer.phar --output composer.phar && \
+RUN curl https://getcomposer.org/download/1.9.0/composer.phar --output composer.phar && \
     chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
 
 #INSTALL GIT, ZIP
