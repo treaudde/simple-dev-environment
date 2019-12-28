@@ -1,5 +1,5 @@
 #SIMPLE DEV ENVIRONMENT
-FROM php:7.3.10-apache-stretch
+FROM php:7.3.13-apache-stretch
 
 #INSTALL COMPOSER
 RUN curl https://getcomposer.org/download/1.9.0/composer.phar --output composer.phar && \

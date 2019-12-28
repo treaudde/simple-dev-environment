@@ -1,5 +1,5 @@
-#SIMPLE DEV ENVIRONMENT
-FROM php:7.3.5-apache-stretch
+#SIMPLE PRODUCTION ENVIRONMENT
+FROM php:7.3.13-apache-stretch
 
 #INSTALL Additional PHP Extensions
 RUN apt-get update && \
