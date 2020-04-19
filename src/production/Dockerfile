@@ -1,5 +1,5 @@
 #SIMPLE PRODUCTION ENVIRONMENT
-FROM php:7.4-apache
+FROM php:7.3.13-apache-stretch
 
 #INSTALL Additional PHP Extensions
 RUN apt-get update && \
@@ -11,7 +11,7 @@ RUN docker-php-source extract \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install zip \
-    && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && docker-php-source delete
 
