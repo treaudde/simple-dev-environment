@@ -6,7 +6,7 @@ RUN curl https://getcomposer.org/download/1.9.0/composer.phar --output composer.
     chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
 
 #INSTALL GIT, ZIP
-RUN apt update && apt install -y git zip && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y git zip wget && rm -rf /var/lib/apt/lists/*
 
 #Install Node / NPM
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash - && \
@@ -34,3 +34,7 @@ RUN a2enmod rewrite
 
 #Copy PHP INI
 COPY config/php.ini /usr/local/etc/php/
+
+#Install Xdebug
+ADD ./scripts/install-xdebug.sh ./
+RUN chmod +x install-xdebug.sh && ./install-xdebug.sh && rm -rf install-xdebug.sh
